@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
+#news-list {
+  width: 100%;
+  height: auto;
+  background-color: #171717;
+}
+
+#news-list #list-wrapper {
+  max-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #95928e;
+  padding: 60px 0 50px 0;
+}
+
+#news-list #list-wrapper #list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 50px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #95928e;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+#news-list #list-wrapper #list-header #title {
+  text-transform: uppercase;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #fff;
+}
+
+#news-list #list-wrapper #list-header #filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 10px;
+  height: 24px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#news-list #list-wrapper #list-header #filters:hover > * {
+  cursor: pointer;
+}
+
+#news-list #list-wrapper #news-content {
+  width: 80%;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+#news-list #list-wrapper #news-content > a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: color 0.6s ease;
+  transition: color 0.6s ease;
+}
+
+#news-list #list-wrapper #news-content > a:hover {
+  color: #fff;
+}
+
+#news-list #list-wrapper #news-content div[id^="item-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+#news-list #list-wrapper #news-content div[id^="item-"] .content-img {
+  width: 150px;
+}
+
+#news-list #list-wrapper #news-content div[id^="item-"] .news-text {
+  width: auto;
+  word-wrap: normal;
+}
+
+#news-list #list-wrapper #filters #bo {
+  width: 28px;
+  height: 11px;
+}
+
+#news-list #list-wrapper #filters #wz {
+  width: 23px;
+  height: 17px;
+}
+
+#news-list #list-wrapper #filters #codmo {
+  width: 18px;
+  height: 21px;
+}
+
+#news-list #list-wrapper #filters #codl {
+  width: 33px;
+  height: 11px;
+}
+
+#news-list #list-wrapper #filters #mw {
+  width: 38px;
+  height: 11px;
+}
+
+#news-list #list-wrapper #show-btn {
+  padding: 12px 20px;
+  margin-top: 10px;
+  background-color: #000;
+}
+
+#news-list #list-wrapper #show-btn > a {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  #news-list {
+    width: 33.3%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 1.5;
+        flex-shrink: 1.5;
+    height: inherit;
+  }
+  #news-list #list-wrapper {
+    max-height: 700px;
+  }
+  #news-list #list-wrapper #news-content {
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 1200px) {
+  #news-list #list-wrapper #news-content {
+    overflow-x: hidden;
+  }
+}
+/*# sourceMappingURL=NewsList.css.map */

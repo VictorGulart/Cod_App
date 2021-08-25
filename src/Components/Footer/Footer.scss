@@ -1,0 +1,172 @@
+@import "../../Styles/Settings.scss";
+@import "../../Styles/Breakpoints.scss";
+
+.footer {
+  border-top: 1px solid #fff;
+  color: white;
+  width: 100%;
+  padding: 0px 15px 100px 15px;
+  background-color: #000;
+  transition: all 0.8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+    color: $text-lightgray;
+    font-size: 0.8rem;
+  }
+}
+
+.inner__footer {
+  width: 90%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.footer__nav {
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &.desktop-only {
+    display: none;
+  }
+}
+
+.footer__link {
+  text-transform: uppercase;
+  text-align: center;
+
+  & > a {
+    color: $text-lightgray;
+    text-decoration: none;
+  }
+}
+
+.studios {
+  width: 100%;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    column-count: 2;
+  }
+}
+
+.studios__link {
+  width: 160px;
+  max-width: 160px;
+  padding: 0 10px;
+  margin: auto;
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 20px;
+
+  & > a {
+    display: block;
+  }
+}
+
+.studio__img {
+  width: 100%;
+  max-width: 100%;
+
+  &.hammer_games {
+    width: auto;
+    height: 45px;
+  }
+}
+
+.pegi {
+  display: block;
+
+  & > .desktop-activision {
+    display: none;
+  }
+}
+
+.pegi__img {
+  width: 100px;
+
+  & > a > img {
+    width: 100%;
+  }
+}
+
+@include response-above(md) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner__footer {
+    width: 90%;
+  }
+  .footer__nav {
+    &.mobile-only {
+      display: none;
+    }
+
+    &.desktop-only {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  .studios {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .studios__link {
+    margin: 0;
+
+    &.mobile-activision {
+      display: none;
+    }
+  }
+
+  .bar-break {
+    color: $text-lightgray;
+    margin: 0px 2rem 0px 2rem;
+  }
+
+  .pegi {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & > .desktop-activision {
+      display: inline;
+      width: 160px;
+    }
+  }
+}
+
+@include response-below(lg) {
+  .inner__footer {
+    width: 90%;
+  }
+}
+
+@include response-above(lg) {
+  .inner__footer {
+    width: 60%;
+  }
+}

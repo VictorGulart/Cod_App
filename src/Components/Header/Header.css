@@ -1,0 +1,862 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
+#header {
+  position: fixed;
+  display: block;
+  background-color: black;
+  width: 100%;
+  z-index: 100 !important;
+}
+
+#header a {
+  display: block;
+  width: 100%;
+  color: #969696;
+  text-decoration: none;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+#header a:hover {
+  color: white;
+}
+
+#header #mobile {
+  position: relative;
+  display: block;
+  height: 50px;
+}
+
+#header #mobile #top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#header #mobile #top-nav #logo {
+  width: 120px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header #mobile #top-nav #logo > a {
+  height: 50px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: x;
+      -ms-flex-align: x;
+          align-items: x;
+}
+
+#header #mobile #top-nav #purchase {
+  margin: 0;
+  border: 1px solid #d0a137;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../../Assets/Images/btn-bg-gold-tile.jpg") center center;
+  background-repeat: repeat;
+  -webkit-box-shadow: inset 0px 0px 5px #597985 !important;
+          box-shadow: inset 0px 0px 5px #597985 !important;
+  text-shadow: 0px 0px 0px #97cde1 !important;
+}
+
+#header #mobile #top-nav #purchase::before {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(253, 217, 150, 0.5)), color-stop(20%, #ffc558), color-stop(80%, #ffc558), to(rgba(253, 217, 150, 0.5))) center center;
+  background: linear-gradient(to right, rgba(253, 217, 150, 0.5), #ffc558 20%, #ffc558 80%, rgba(253, 217, 150, 0.5)) center center;
+}
+
+#header #mobile #top-nav #purchase:hover #top-line {
+  width: 100%;
+  -webkit-animation: top-fliker forwards 1s;
+          animation: top-fliker forwards 1s;
+}
+
+#header #mobile #top-nav #purchase:hover #bottom-line {
+  width: 100%;
+  -webkit-animation: bottom-fliker forwards 1s;
+          animation: bottom-fliker forwards 1s;
+}
+
+#header #mobile #top-nav #purchase #top-line {
+  width: 0px;
+  height: 1.3px;
+  background-color: #d0a137;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+  -webkit-box-shadow: 0px 3px 15px #97cde1;
+          box-shadow: 0px 3px 15px #97cde1;
+}
+
+#header #mobile #top-nav #purchase #bottom-line {
+  width: 0px;
+  height: 1.3px;
+  background-color: #d0a137;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear;
+  -webkit-box-shadow: 0px -3px 15px #97cde1;
+          box-shadow: 0px -3px 15px #97cde1;
+}
+
+@-webkit-keyframes top-fliker {
+  from {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  12% {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+  25% {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  to {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+}
+
+@keyframes top-fliker {
+  from {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  12% {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+  25% {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  to {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+}
+
+@-webkit-keyframes bottom-fliker {
+  from {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  12% {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+  25% {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  to {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+}
+
+@keyframes bottom-fliker {
+  from {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  12% {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+  25% {
+    -webkit-box-shadow: 0px -3px 5px #97cde1;
+            box-shadow: 0px -3px 5px #97cde1;
+  }
+  to {
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+}
+
+#header #mobile #top-nav #purchase #buy-btn {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#header #mobile #top-nav #purchase #buy-btn > a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+#header #mobile #top-nav #menu-burger {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: black;
+  position: relative;
+}
+
+#header #mobile #top-nav #menu-burger .bar {
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#header #mobile #top-nav #menu-burger #one {
+  top: 25%;
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+  -webkit-animation: one-turn-revert 1s 0s;
+          animation: one-turn-revert 1s 0s;
+}
+
+#header #mobile #top-nav #menu-burger #two {
+  top: 50%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#header #mobile #top-nav #menu-burger #three {
+  top: 75%;
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+  -webkit-animation: three-turn-revert 1s 0s;
+          animation: three-turn-revert 1s 0s;
+}
+
+#header #mobile #top-nav :hover {
+  cursor: pointer;
+}
+
+#header #mobile-nav-panel {
+  position: fixed;
+  height: 0;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-image: url("../../Assets/Images/global-nav-bg-mobile.png");
+  background-size: 2px;
+  background-color: #000;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+#header #mobile-nav-panel #inner-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .link {
+  padding: 25px;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .link:hover {
+  cursor: pointer;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .link a {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 15px;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .link img {
+  height: 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .games > a {
+  pointer-events: none;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .esports > a {
+  pointer-events: none;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links #games-sub-nav {
+  display: none;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links #esports-sub-nav {
+  display: none;
+}
+
+#header #mobile-nav-panel #inner-panel #nav-links .sublink {
+  padding: 25px 50px;
+  font-size: 12px;
+}
+
+#header #desktop {
+  display: none;
+}
+
+#header.active #mobile-nav-panel {
+  height: calc(100% - 50px);
+}
+
+.games.link.active > a {
+  color: white;
+}
+
+.games.link.active > img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.esports.link.active > a {
+  color: white;
+}
+
+.esports.link.active > img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@-webkit-keyframes one-turn {
+  from {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes one-turn {
+  from {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@-webkit-keyframes one-turn-revert {
+  from {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes one-turn-revert {
+  from {
+    -webkit-transform: translateX(-50%) rotate(45deg);
+            transform: translateX(-50%) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes three-turn {
+  from {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+            transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+@keyframes three-turn {
+  from {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+            transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes three-turn-revert {
+  from {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+            transform: translateX(-50%) rotate(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes three-turn-revert {
+  from {
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+            transform: translateX(-50%) rotate(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes arrow-turn {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes arrow-turn {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes arrow-turn-revert {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes arrow-turn-revert {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 1200px) {
+  #header #mobile {
+    display: none;
+  }
+  #header #desktop {
+    display: block;
+    background-image: url("../../Assets/Images/global-nav-bg-mobile.png");
+    background-size: 2px;
+    background-color: #000;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #header #desktop #left-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #header #desktop #left-side #logo {
+    padding: 0px 10px;
+    width: auto;
+    height: 50px;
+  }
+  #header #desktop #left-side #logo a {
+    width: 105px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px;
+  }
+  #header #desktop #left-side #logo:hover {
+    background-color: #080808;
+  }
+  #header #desktop #left-side #nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  #header #desktop #left-side #nav-links .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    font-size: 12px;
+  }
+  #header #desktop #left-side #nav-links .link a {
+    padding: 18px 15px;
+    width: 100%;
+  }
+  #header #desktop #left-side #nav-links .link img {
+    width: 10px;
+    margin-left: 15px;
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    pointer-events: none;
+  }
+  #header #desktop #left-side #nav-links .link.games:hover {
+    background-color: #141414;
+  }
+  #header #desktop #left-side #nav-links .link.games:hover img {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  #header #desktop #left-side #nav-links .link.games:hover #games-sub-nav {
+    display: block;
+  }
+  #header #desktop #left-side #nav-links .link #games-sub-nav {
+    position: absolute;
+    display: none;
+    top: 50px;
+    background-color: #222222;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #header #desktop #left-side #nav-links .link #games-sub-nav > div > a {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 19px 35px;
+  }
+  #header #desktop #left-side #nav-links .link.esports:hover {
+    background-color: #141414;
+  }
+  #header #desktop #left-side #nav-links .link.esports:hover img {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  #header #desktop #left-side #nav-links .link.esports:hover #esports-sub-nav {
+    display: block;
+  }
+  #header #desktop #left-side #nav-links .link #esports-sub-nav {
+    position: absolute;
+    display: none;
+    top: 50px;
+    background-color: #222222;
+  }
+  #header #desktop #left-side #nav-links .link #esports-sub-nav > div > a {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 19px 35px;
+  }
+  #header #desktop #left-side .sublink {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #header #desktop #left-side .sublink a {
+    position: relative;
+  }
+  #header #desktop #left-side .sublink .left-wing {
+    position: absolute;
+    left: 38px;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #header #desktop #left-side .sublink .right-wing {
+    position: absolute;
+    right: 38px;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #header #desktop #left-side .sublink:hover {
+    background-color: #141414;
+  }
+  #header #desktop #left-side .sublink:hover .left-wing {
+    opacity: 1;
+    left: 25px;
+  }
+  #header #desktop #left-side .sublink:hover .right-wing {
+    opacity: 1;
+    right: 24px;
+  }
+  #header #desktop #left-side .sublink:hover a {
+    text-shadow: 0px 0px 18px #c8c8c8;
+  }
+  #header #desktop #right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #header #desktop #sso {
+    color: #969696;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #header #desktop #sso > a {
+    margin: 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #header #desktop #mycod {
+    height: 50px;
+    font-size: 12px;
+    position: relative;
+    padding: 19px 15px 19px 45px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  #header #desktop #mycod::before {
+    content: "";
+    width: 20px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    background-image: url("../../Assets/Images/shield_icon_no_drop.png");
+    opacity: 0.5;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  #header #desktop #mycod:hover {
+    color: white;
+    background-color: #080808;
+  }
+  #header #desktop #purchase {
+    margin: 1px 0 0 0;
+    border: 1px solid #d0a137;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: url("../../Assets/Images/btn-bg-gold-tile.jpg") center center;
+    background-repeat: repeat;
+    -webkit-box-shadow: inset 0px 0px 5px #597985 !important;
+            box-shadow: inset 0px 0px 5px #597985 !important;
+    text-shadow: 0px 0px 0px #97cde1 !important;
+  }
+  #header #desktop #purchase::before {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(253, 217, 150, 0.5)), color-stop(20%, #ffc558), color-stop(80%, #ffc558), to(rgba(253, 217, 150, 0.5))) center center;
+    background: linear-gradient(to right, rgba(253, 217, 150, 0.5), #ffc558 20%, #ffc558 80%, rgba(253, 217, 150, 0.5)) center center;
+  }
+  #header #desktop #purchase:hover #top-line {
+    width: 100%;
+    -webkit-animation: top-fliker forwards 1s;
+            animation: top-fliker forwards 1s;
+  }
+  #header #desktop #purchase:hover #bottom-line {
+    width: 100%;
+    -webkit-animation: bottom-fliker forwards 1s;
+            animation: bottom-fliker forwards 1s;
+  }
+  #header #desktop #purchase #top-line {
+    width: 0px;
+    height: 1.3px;
+    background-color: #d0a137;
+    -webkit-transition: width 0.5s linear;
+    transition: width 0.5s linear;
+    -webkit-box-shadow: 0px 3px 15px #97cde1;
+            box-shadow: 0px 3px 15px #97cde1;
+  }
+  #header #desktop #purchase #bottom-line {
+    width: 0px;
+    height: 1.3px;
+    background-color: #d0a137;
+    -webkit-transition: width 0.5s linear;
+    transition: width 0.5s linear;
+    -webkit-box-shadow: 0px -3px 15px #97cde1;
+            box-shadow: 0px -3px 15px #97cde1;
+  }
+  @-webkit-keyframes top-fliker {
+    from {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    12% {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+    25% {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    to {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+  }
+  @keyframes top-fliker {
+    from {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    12% {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+    25% {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    to {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+  }
+  @-webkit-keyframes bottom-fliker {
+    from {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    12% {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+    25% {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    to {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+  }
+  @keyframes bottom-fliker {
+    from {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    12% {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+    25% {
+      -webkit-box-shadow: 0px -3px 5px #97cde1;
+              box-shadow: 0px -3px 5px #97cde1;
+    }
+    to {
+      -webkit-box-shadow: 0px -3px 15px #97cde1;
+              box-shadow: 0px -3px 15px #97cde1;
+    }
+  }
+  #header #desktop #purchase #buy-btn {
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #header #desktop #purchase #buy-btn > a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+  }
+}
+/*# sourceMappingURL=Header.css.map */

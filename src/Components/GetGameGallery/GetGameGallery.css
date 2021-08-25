@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
+.btn--clear {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.btn--clear:hover {
+  cursor: pointer;
+}
+
+.gallery {
+  width: 100vw;
+  max-width: 100%;
+  height: 850px;
+  background-color: #000;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.gallery__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .slider {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  left: 100%;
+  opacity: 0;
+  -webkit-transition: left 0.35s ease-out;
+  transition: left 0.35s ease-out;
+  padding-top: 40px;
+}
+
+.gallery .slider.active {
+  left: 0;
+  opacity: 1;
+}
+
+.gallery .slider.hide {
+  left: -100%;
+}
+
+.gallery .slider__inner {
+  height: 100%;
+}
+
+.gallery .slider__inner .slider__nav__btn {
+  margin: auto;
+  max-width: 80vw;
+}
+
+.gallery .slider__inner .slider__nav__btn button {
+  font-size: 1.45rem;
+  font-weight: lighter;
+}
+
+.gallery .slider__inner .slider__title {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 65px;
+  max-width: 80vw;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #95928e;
+  padding-left: 1.45rem;
+  padding-right: 1.45rem;
+}
+
+.gallery .slider__inner .slider__content {
+  margin: 0 auto;
+  padding: 0;
+  width: inherit;
+  max-width: 1280px;
+}
+
+.cards__container {
+  width: 80.5vw;
+  max-width: 384px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 22px;
+  -webkit-column-gap: 22px;
+          column-gap: 22px;
+}
+
+.cards__container .card {
+  margin: 0;
+  padding: 0;
+  width: 37.3vw;
+  height: 51.24vw;
+  max-width: 179px;
+  max-height: 246px;
+  border: 1px solid #fff;
+}
+
+.cards__container .card > * {
+  pointer-events: none;
+}
+
+.cards__container .card:hover {
+  cursor: pointer;
+}
+
+.cards__container .card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cards__container .card__content .card__promo {
+  position: absolute;
+  left: -1px;
+  bottom: 100%;
+  width: calc(100% + 2px);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #fff;
+}
+
+.cards__container .card__content .card__promo .promo_text p {
+  padding: 4px;
+  margin: 0;
+  text-align: center;
+  color: #950815;
+  font-weight: 600;
+}
+
+.cards__container .card__content .card__promo .promo_text p sup {
+  font-size: 42%;
+}
+
+.cards__container .card__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cards__container .card__image .image_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cards__container .card__image .image_container .game__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cards__container .card__image .image_container .game__image.desktop__only {
+  display: none;
+}
+
+.cards__container #battlepass {
+  max-width: none;
+  width: 100%;
+  height: 75px;
+}
+
+.platforms {
+  margin: auto;
+  width: 90vw;
+  height: 100%;
+}
+
+.platforms .platforms__container {
+  width: 100%;
+  height: 100%;
+}
+
+.platforms .platforms__container .platform {
+  height: 30.83vw;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.platforms .platforms__container .platform + * {
+  margin-top: 50px;
+}
+
+.platforms .platforms__container .platform .platform__discount {
+  position: absolute;
+  left: -1px;
+  bottom: 100%;
+  width: calc(100% + 2px);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+  text-decoration: none;
+  color: #950815;
+  background-color: #fff;
+}
+
+.platforms .platforms__container .platform .platform__discount p {
+  padding: 5px 0px;
+  margin: 0;
+}
+
+.platforms .platforms__container .platform .platform__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.platforms .platforms__container .platform .platform__icon {
+  color: #95928e;
+  text-align: center;
+  color: #fff;
+}
+
+.platforms .platforms__container .platform .platform__icon .fab {
+  font-size: 5rem;
+}
+
+.platforms .platforms__container .platform .platform__name {
+  margin-top: 10px;
+}
+
+.platforms .extra {
+  color: #95928e;
+}
+
+.platforms .extra * + * {
+  margin-top: 5px;
+}
+
+.platforms .extra .change__region {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.platforms .extra .change__game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+  .platforms .platforms__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .platforms .platforms__container .platform {
+    width: 382px;
+    height: 148px;
+  }
+  .platforms .platforms__container .platform:nth-child(3) {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cards__container {
+    min-width: 800px;
+    max-width: inherit;
+    width: 80vw;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+  .cards__container #battlepass {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    width: calc(38.5vw + 14px);
+    max-width: 635px;
+    height: 5.859375vw;
+    min-height: 75px;
+    max-height: 75px;
+  }
+  .cards__container .card {
+    width: 19.25vw;
+    height: 19.25vw;
+    max-width: 310px;
+    max-height: 310px;
+  }
+  .cards__container .card__image .image_container .game__image.mobile__only {
+    display: none;
+  }
+  .cards__container .card__image .image_container .game__image.desktop__only {
+    display: block;
+  }
+  .platforms {
+    max-width: 80vw;
+  }
+  .platforms .platforms__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .platforms .platforms__container .platform {
+    width: 23.5vw;
+    height: 23.5vw;
+    margin: 0px;
+  }
+  .platforms .platforms__container .platform:nth-child(3) {
+    margin-top: 0;
+  }
+  .platforms .platforms__container .platform .platform__icon .fab {
+    font-size: 7.5rem;
+  }
+  .platforms .extra {
+    margin-top: 40px;
+  }
+}
+/*# sourceMappingURL=GetGameGallery.css.map */

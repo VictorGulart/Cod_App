@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
+#banner {
+  margin-top: 50px;
+  min-height: 800px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+#banner .desktop-only {
+  display: none;
+}
+
+#banner #tile-bg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#banner #tile-bg #banner-img {
+  background-image: url("../../Assets/Images/mobile-banner.jpg");
+  height: 100%;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#banner #tile-content {
+  position: absolute;
+  width: 80%;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#banner #tile-content #text-wrapper #tile-logo {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner #tile-content #text-wrapper #tile-logo > h1 {
+  margin: 0;
+  padding: 0;
+  width: 255px;
+}
+
+#banner #tile-content #text-wrapper #tile-logo > h1 > img {
+  width: inherit;
+}
+
+#banner #tile-content #text-wrapper #tile-title {
+  width: 90%;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  margin: 0 auto;
+}
+
+#banner #tile-content #text-wrapper #tile-title > h2 {
+  font-size: 27px;
+  margin: 0;
+  letter-spacing: 3px;
+  line-height: 27px;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+#banner #tile-content #text-wrapper #tile-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 13px 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  border-top: 2px solid #cdc4bd;
+  border-bottom: 2px solid #cdc4bd;
+  background-color: #e5e3e3;
+}
+
+#banner #tile-content #text-wrapper #tile-btn:hover > a::after {
+  background-position: 0;
+}
+
+#banner #tile-content #text-wrapper #tile-btn > a {
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 200px;
+  color: #000;
+  font-family: "Alegreya", sans-serif;
+}
+
+#banner #tile-content #text-wrapper #tile-btn > a::after {
+  background-image: url("../../Assets/Images/light-button-line.svg");
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: -400px;
+  min-width: 200px;
+  height: 3px;
+  display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  #banner {
+    position: relative;
+    height: 0;
+    min-height: 500px;
+    padding-bottom: 40%;
+  }
+  #banner #tile-bg {
+    height: auto;
+  }
+  #banner #tile-bg .mobile-only {
+    display: none;
+  }
+  #banner #tile-bg #banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    background-image: url("../../Assets/Images/desktop-banner.jpg");
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  #banner #tile-bg .desktop-only {
+    display: block;
+  }
+  #banner #tile-content {
+    position: absolute;
+    left: 40px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    max-width: 600px;
+  }
+  #banner #tile-content #text-wrapper #tile-logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #banner #tile-content #text-wrapper #tile-logo > h1 > img {
+    max-width: 120%;
+    width: auto;
+  }
+  #banner #tile-content #text-wrapper #tile-title {
+    text-align: left;
+    margin: 0;
+    padding: 0 0 25px 0;
+  }
+  #banner #tile-content #text-wrapper #tile-btn {
+    width: 240px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/*# sourceMappingURL=Banner.css.map */

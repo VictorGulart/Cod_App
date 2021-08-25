@@ -1,0 +1,145 @@
+@import "../../Styles/Breakpoints.scss";
+@import "../../Styles/Settings.scss";
+
+// Colors
+#news-list {
+  width: 100%;
+  height: auto;
+  background-color: $bg-darkgray;
+
+  #list-wrapper {
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-lightgray;
+    padding: 60px 0 50px 0;
+
+    #list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      height: 50px;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid $text-lightgray;
+      background-color: transparent;
+      font-family: $montserrat;
+
+      #title {
+        text-transform: uppercase;
+        width: max-content;
+        color: #fff;
+      }
+      #filters {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        height: 24px;
+        width: fit-content;
+
+        &:hover > * {
+          cursor: pointer;
+        }
+      }
+    }
+
+    #news-content {
+      width: 80%;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      & > a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.6s ease;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+      div[id^="item-"] {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .content-img {
+          width: 150px;
+        }
+
+        .news-text {
+          width: auto;
+          word-wrap: normal;
+        }
+      }
+    }
+
+    // Separate Styling for each filter icon
+    #filters {
+      #bo {
+        width: 28px;
+        height: 11px;
+      }
+      #wz {
+        width: 23px;
+        height: 17px;
+      }
+      #codmo {
+        width: 18px;
+        height: 21px;
+      }
+      #codl {
+        width: 33px;
+        height: 11px;
+      }
+      #mw {
+        width: 38px;
+        height: 11px;
+      }
+    }
+
+    #show-btn {
+      padding: 12px 20px;
+      margin-top: 10px;
+      background-color: #000;
+      & > a {
+        font-family: $roboto;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+// Above Medium Screen
+@include response-above(md) {
+  #news-list {
+    width: 33.3%;
+    flex-grow: 1;
+    flex-shrink: 1.5;
+    height: inherit;
+
+    #list-wrapper {
+      max-height: 700px;
+      #news-content {
+        overflow-x: scroll;
+      }
+    }
+  }
+}
+
+// Above Large Screen
+@include response-above(lg) {
+  #news-list {
+    #list-wrapper {
+      #news-content {
+        overflow-x: hidden;
+      }
+    }
+  }
+}

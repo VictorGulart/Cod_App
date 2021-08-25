@@ -1,0 +1,650 @@
+// Import Breakpoints
+@import "../../Styles/Breakpoints";
+@import "../../Styles/Settings";
+
+// Colors
+$color-border: #d0a137;
+$color-text-shadow: #e1d297;
+$blue-flicker: #97cde1;
+$color-box-shadow: #b59228;
+$nav-link-color: #969696;
+
+#header {
+  position: fixed;
+  display: block;
+  background-color: black;
+  width: 100%;
+  z-index: 100 !important;
+
+  a {
+    display: block;
+    width: 100%;
+    color: #969696;
+    text-decoration: none;
+    display: block;
+    font-family: $montserrat;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  #mobile {
+    position: relative;
+    display: block;
+    height: 50px;
+
+    #top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      #logo {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > a {
+          height: 50px;
+          width: 120px;
+          display: flex;
+          justify-content: center;
+          align-items: x;
+        }
+      }
+
+      #purchase {
+        margin: 0;
+        border: 1px solid $color-border;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background: url("../../Assets/Images/btn-bg-gold-tile.jpg") center
+          center;
+        background-repeat: repeat;
+        box-shadow: inset 0px 0px 5px #597985 !important;
+        text-shadow: 0px 0px 0px #97cde1 !important;
+
+        &::before {
+          background: linear-gradient(
+              to right,
+              rgba(253, 217, 150, 0.5),
+              #ffc558 20%,
+              #ffc558 80%,
+              rgba(253, 217, 150, 0.5)
+            )
+            center center;
+        }
+
+        &:hover {
+          #top-line {
+            width: 100%;
+            animation: top-fliker forwards 1s;
+          }
+
+          #bottom-line {
+            width: 100%;
+            animation: bottom-fliker forwards 1s;
+          }
+        }
+
+        #top-line {
+          width: 0px;
+          height: 1.3px;
+          background-color: $color-border;
+          transition: width 0.5s linear;
+          box-shadow: 0px 3px 15px $blue-flicker;
+        }
+
+        #bottom-line {
+          width: 0px;
+          height: 1.3px;
+          background-color: $color-border;
+          transition: width 0.5s linear;
+          box-shadow: 0px -3px 15px $blue-flicker;
+        }
+
+        @keyframes top-fliker {
+          from {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          12% {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+          25% {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          to {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+        }
+
+        @keyframes bottom-fliker {
+          from {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          12% {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+          25% {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          to {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+        }
+
+        #buy-btn {
+          color: white;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          & > a {
+            text-decoration: none;
+            color: white;
+            letter-spacing: 1px;
+            font-size: 15px;
+            font-family: $roboto;
+          }
+        }
+      }
+
+      #menu-burger {
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: black;
+        position: relative;
+
+        .bar {
+          width: 30px;
+          height: 1px;
+          background-color: rgb(255, 255, 255);
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        #one {
+          top: 25%;
+          transition: top 0.3s ease;
+          animation: one-turn-revert 1s 0s;
+        }
+
+        #two {
+          top: 50%;
+          transition: 0.3s ease;
+        }
+        #three {
+          top: 75%;
+          transition: top 0.3s ease;
+          animation: three-turn-revert 1s 0s;
+        }
+      }
+      & :hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  #mobile-nav-panel {
+    position: fixed;
+    height: 0;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-image: url("../../Assets/Images/global-nav-bg-mobile.png");
+    background-size: 2px;
+    background-color: #000;
+    transition: height 1s;
+
+    #inner-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+
+      #nav-links {
+        .link {
+          padding: 25px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          a {
+            height: fit-content;
+            font-size: 15px;
+          }
+
+          img {
+            height: 10px;
+            transition: all 0.4s ease;
+          }
+        }
+
+        .games > a {
+          pointer-events: none;
+        }
+
+        .esports > a {
+          pointer-events: none;
+        }
+
+        #games-sub-nav {
+          display: none;
+        }
+
+        #esports-sub-nav {
+          display: none;
+        }
+
+        .sublink {
+          padding: 25px 50px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  #desktop {
+    display: none;
+  }
+}
+
+#header.active #mobile-nav-panel {
+  height: calc(100% - 50px);
+}
+
+.games.link.active {
+  & > a {
+    color: white;
+  }
+  & > img {
+    transform: rotate(-180deg);
+  }
+}
+
+.esports.link.active {
+  & > a {
+    color: white;
+  }
+  & > img {
+    transform: rotate(-180deg);
+  }
+}
+
+// Animations
+
+@keyframes one-turn {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@keyframes one-turn-revert {
+  from {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes three-turn {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+@keyframes three-turn-revert {
+  from {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes arrow-turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes arrow-turn-revert {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+// Above Medium Size
+@include response-above(lg) {
+  #header {
+    #mobile {
+      display: none;
+    }
+
+    #desktop {
+      display: block;
+      background-image: url("../../Assets/Images/global-nav-bg-mobile.png");
+      background-size: 2px;
+      background-color: #000;
+      position: sticky;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      #left-side {
+        display: flex;
+        align-items: center;
+        #logo {
+          padding: 0px 10px;
+          width: auto;
+          height: 50px;
+          a {
+            width: 105px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+          }
+
+          &:hover {
+            background-color: rgba(8, 8, 8, 1);
+          }
+        }
+
+        #nav-links {
+          display: flex;
+          position: relative;
+
+          .link {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            font-size: 12px;
+
+            a {
+              padding: 18px 15px;
+              width: 100%;
+            }
+
+            img {
+              width: 10px;
+              margin-left: 15px;
+              transition: transform 0.4s ease;
+              pointer-events: none;
+            }
+
+            &.games:hover {
+              background-color: #141414;
+              img {
+                transform: rotate(-180deg);
+              }
+
+              #games-sub-nav {
+                display: block;
+              }
+            }
+            #games-sub-nav {
+              position: absolute;
+              display: none;
+              top: 50px;
+              background-color: rgb(34, 34, 34);
+              transition: all 0.4s ease;
+
+              & > div > a {
+                width: max-content;
+                padding: 19px 35px;
+              }
+            }
+
+            &.esports:hover {
+              background-color: #141414;
+              img {
+                transform: rotate(-180deg);
+              }
+
+              #esports-sub-nav {
+                display: block;
+              }
+            }
+
+            #esports-sub-nav {
+              position: absolute;
+              display: none;
+              top: 50px;
+              // background-color: #141414;
+              background-color: rgb(34, 34, 34);
+
+              & > div > a {
+                width: max-content;
+                padding: 19px 35px;
+              }
+            }
+          }
+        }
+
+        .sublink {
+          transition: all 0.4s ease;
+          a {
+            position: relative;
+          }
+
+          .left-wing {
+            position: absolute;
+            left: 38px;
+            opacity: 0;
+            transition: all 0.4s ease;
+          }
+
+          .right-wing {
+            position: absolute;
+            right: 38px;
+            opacity: 0;
+            transition: all 0.4s ease;
+          }
+
+          &:hover {
+            background-color: #141414;
+
+            .left-wing {
+              opacity: 1;
+              left: 25px;
+            }
+
+            .right-wing {
+              opacity: 1;
+              right: 24px;
+            }
+
+            a {
+              text-shadow: 0px 0px 18px #c8c8c8;
+            }
+          }
+        }
+      }
+
+      #right-side {
+        display: flex;
+      }
+      #sso {
+        color: $nav-link-color;
+        justify-content: space-between;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+
+        & > a {
+          margin: 5px;
+          width: fit-content;
+        }
+      }
+
+      #mycod {
+        height: 50px;
+        font-size: 12px;
+        position: relative;
+        padding: 19px 15px 19px 45px;
+        transition: all 0.4s ease;
+
+        &::before {
+          content: "";
+          width: 20px;
+          height: 18px;
+          position: absolute;
+          top: 50%;
+          left: 14px;
+          transform: translate(0, -50%);
+          background-image: url("../../Assets/Images/shield_icon_no_drop.png");
+          opacity: 0.5;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+
+        &:hover {
+          color: white;
+          background-color: rgba(8, 8, 8, 1);
+        }
+      }
+
+      #purchase {
+        margin: 1px 0 0 0;
+        border: 1px solid $color-border;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background: url("../../Assets/Images/btn-bg-gold-tile.jpg") center
+          center;
+        background-repeat: repeat;
+        box-shadow: inset 0px 0px 5px #597985 !important;
+        text-shadow: 0px 0px 0px #97cde1 !important;
+
+        &::before {
+          background: linear-gradient(
+              to right,
+              rgba(253, 217, 150, 0.5),
+              #ffc558 20%,
+              #ffc558 80%,
+              rgba(253, 217, 150, 0.5)
+            )
+            center center;
+        }
+
+        &:hover {
+          #top-line {
+            width: 100%;
+            animation: top-fliker forwards 1s;
+          }
+
+          #bottom-line {
+            width: 100%;
+            animation: bottom-fliker forwards 1s;
+          }
+        }
+
+        #top-line {
+          width: 0px;
+          height: 1.3px;
+          background-color: $color-border;
+          transition: width 0.5s linear;
+          box-shadow: 0px 3px 15px $blue-flicker;
+        }
+
+        #bottom-line {
+          width: 0px;
+          height: 1.3px;
+          background-color: $color-border;
+          transition: width 0.5s linear;
+          box-shadow: 0px -3px 15px $blue-flicker;
+        }
+
+        @keyframes top-fliker {
+          from {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          12% {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+          25% {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          to {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+        }
+
+        @keyframes bottom-fliker {
+          from {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          12% {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+          25% {
+            box-shadow: 0px -3px 5px $blue-flicker;
+          }
+          to {
+            box-shadow: 0px -3px 15px $blue-flicker;
+          }
+        }
+
+        #buy-btn {
+          color: white;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          & > a {
+            text-decoration: none;
+            color: white;
+            letter-spacing: 1px;
+            font-size: 12px;
+            font-family: $roboto;
+          }
+        }
+      }
+    }
+  }
+}

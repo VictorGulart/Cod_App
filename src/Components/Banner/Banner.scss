@@ -1,0 +1,179 @@
+@import "../../Styles/Breakpoints";
+@import "../../Styles/Settings";
+
+// Mobile Styling
+
+#banner {
+  margin-top: 50px;
+  min-height: 800px;
+  padding-bottom: 0px;
+  position: relative;
+  // overflow: hidden;
+
+  .desktop-only {
+    display: none;
+  }
+
+  #tile-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: #000;
+
+    #banner-img {
+      background-image: url("../../Assets/Images/mobile-banner.jpg");
+      height: 100%;
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  #tile-content {
+    position: absolute;
+    width: 80%;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    #text-wrapper {
+      #tile-logo {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > h1 {
+          margin: 0;
+          padding: 0;
+          width: 255px;
+          & > img {
+            width: inherit;
+          }
+        }
+      }
+      #tile-title {
+        width: 90%;
+        text-transform: uppercase;
+        font-family: $montserrat;
+        color: white;
+        text-align: center;
+        padding: 25px 0;
+        margin: 0 auto;
+
+        & > h2 {
+          font-size: 27px;
+          margin: 0;
+          letter-spacing: 3px;
+          line-height: 27px;
+          text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+        }
+      }
+      #tile-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: center;
+        border-top: 2px solid #cdc4bd;
+        border-bottom: 2px solid #cdc4bd;
+        background-color: #e5e3e3;
+
+        &:hover {
+          & > a::after {
+            background-position: 0;
+          }
+        }
+
+        & > a {
+          text-transform: uppercase;
+          text-decoration: none;
+          min-width: 200px;
+          color: #000;
+          font-family: $alegreya;
+
+          &::after {
+            background-image: url("../../Assets/Images/light-button-line.svg");
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 400px;
+            background-position: -400px;
+            min-width: 200px;
+            height: 3px;
+            display: block;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablets and Desktops Styling
+@include response-above(sm) {
+  #banner {
+    position: relative;
+    height: 0;
+    min-height: 500px;
+    padding-bottom: 40%;
+
+    #tile-bg {
+      height: auto;
+      .mobile-only {
+        display: none;
+      }
+
+      #banner-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center center;
+        background-image: url("../../Assets/Images/desktop-banner.jpg");
+        transform: scale(1.01);
+      }
+      .desktop-only {
+        display: block;
+      }
+    }
+
+    #tile-content {
+      position: absolute;
+      left: 40px;
+      transform: translateX(0);
+      max-width: 600px;
+
+      #text-wrapper {
+        #tile-logo {
+          justify-content: flex-start;
+
+          & > h1 > img {
+            max-width: 120%;
+            width: auto;
+          }
+        }
+        #tile-title {
+          text-align: left;
+          margin: 0;
+          padding: 0 0 25px 0;
+        }
+        #tile-btn {
+          width: 240px;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@include response-above(md) {
+  #banner {
+  }
+}

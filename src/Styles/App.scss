@@ -1,0 +1,32 @@
+// Imports
+@import "./Settings.scss";
+@import "./Breakpoints";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+#root {
+  min-height: inherit;
+  min-width: 100%;
+  @include flex($direction: column, $justify: flex-start);
+  background-color: lightslategray;
+}
+
+
+body::-webkit-scrollbar{
+  width: 10px;
+}
+
+#app {
+  width: 100%;
+  min-width: inherit;
+}

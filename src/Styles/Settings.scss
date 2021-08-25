@@ -1,0 +1,20 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
+$roboto: "Roboto", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$alegreya: "Alegreya", sans-serif;
+
+// Colors
+$bg-darkgray: #171717;
+$text-lightgray: #95928e;
+$discount-red: #950815;
+
+// Mixings
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}

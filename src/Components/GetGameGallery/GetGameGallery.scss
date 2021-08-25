@@ -1,0 +1,352 @@
+@import "../../Styles/Breakpoints.scss";
+@import "../../Styles/Settings.scss";
+
+.btn--clear {
+  color: white;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.gallery {
+  width: 100vw;
+  max-width: 100%;
+  height: 850px;
+  background-color: #000;
+  font-family: $montserrat;
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  // SLIDER
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    left: 100%;
+    opacity: 0;
+    transition: left 0.35s ease-out;
+    padding-top: 40px;
+
+    &.active {
+      left: 0;
+      opacity: 1;
+    }
+
+    &.hide {
+      left: -100%;
+    }
+
+    &__inner {
+      height: 100%;
+
+      .slider__nav__btn {
+        margin: auto;
+        max-width: 80vw;
+        button {
+          font-size: 1.45rem;
+          font-weight: lighter;
+        }
+      }
+
+      .slider__title {
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 65px; // change when no discount
+        max-width: 80vw;
+        font-size: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: $text-lightgray;
+        padding-left: 1.45rem;
+        padding-right: 1.45rem;
+      }
+
+      .slider__content {
+        margin: 0 auto;
+        padding: 0;
+        width: inherit;
+        max-width: 1280px;
+      }
+    }
+  }
+}
+
+// CARDS CONTAINER
+.cards__container {
+  width: 80.5vw;
+  max-width: 384px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 22px;
+  column-gap: 22px;
+
+  .card {
+    margin: 0;
+    padding: 0;
+    width: 37.3vw;
+    height: 51.24vw;
+    max-width: 179px;
+    max-height: 246px;
+    border: 1px solid #fff;
+
+    & > * {
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .card__promo {
+        position: absolute;
+        left: -1px;
+        bottom: 100%;
+        width: calc(100% + 2px);
+        height: max-content;
+        background-color: #fff;
+
+        .promo_text {
+          p {
+            padding: 4px;
+            margin: 0;
+            text-align: center;
+            color: $discount-red;
+            font-weight: 600;
+            sup {
+              font-size: 42%;
+            }
+          }
+        }
+      }
+    }
+
+    &__image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .image_container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .game__image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &.mobile__only {
+          }
+
+          &.desktop__only {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  #battlepass {
+    max-width: none;
+    width: 100%;
+    height: 75px;
+  }
+}
+
+// PLATFORMS
+.platforms {
+  margin: auto;
+  width: 90vw;
+  height: 100%;
+
+  .platforms__container {
+    width: 100%;
+    height: 100%;
+
+    .platform {
+      // Add margin to the other sibling after the first element
+      & + * {
+        margin-top: 50px;
+      }
+
+      height: 30.83vw;
+      border: 1px solid #fff;
+      position: relative;
+
+      .platform__discount {
+        position: absolute;
+        left: -1px;
+        bottom: 100%;
+        width: calc(100% + 2px);
+        height: max-content;
+        text-align: center;
+        text-decoration: none;
+        color: $discount-red;
+        background-color: #fff;
+
+        p {
+          padding: 5px 0px;
+          margin: 0;
+        }
+      }
+
+      .platform__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .platform__icon {
+        color: $text-lightgray;
+        text-align: center;
+        color: #fff;
+
+        .fab {
+          font-size: 5rem;
+        }
+      }
+
+      .platform__name {
+        margin-top: 10px;
+      }
+    }
+  }
+  .extra {
+    color: $text-lightgray;
+
+    & * + * {
+      margin-top: 5px;
+    }
+
+    .change__region {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .change__game {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@include response-above(xs) {
+  .platforms {
+    .platforms__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .platform {
+        width: 382px;
+        height: 148px;
+        &:nth-child(3) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERY FOR MEDIUM SCREEN
+@include response-above(md) {
+  .cards__container {
+    min-width: 800px;
+    max-width: inherit;
+    width: 80vw;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    #battlepass {
+      order: 5;
+      width: calc(38.5vw + 14px);
+      max-width: 635px;
+      height: 5.859375vw;
+      min-height: 75px;
+      max-height: 75px;
+    }
+
+    .card {
+      width: 19.25vw;
+      height: 19.25vw;
+      max-width: 310px;
+      max-height: 310px;
+
+      &__content {
+      }
+
+      &__image {
+        .image_container {
+          .game__image.mobile__only {
+            display: none;
+          }
+
+          .game__image {
+            &.desktop__only {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .platforms {
+    max-width: 80vw;
+
+    .platforms__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .platform {
+        width: 23.5vw;
+        height: 23.5vw;
+        margin: 0px;
+
+        &:nth-child(3) {
+          margin-top: 0;
+        }
+
+        .platform__icon {
+          .fab {
+            font-size: 7.5rem;
+          }
+        }
+      }
+    }
+
+    .extra {
+      margin-top: 40px;
+    }
+  }
+}

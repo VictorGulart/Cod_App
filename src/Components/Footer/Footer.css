@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&display=swap");
+.footer {
+  border-top: 1px solid #fff;
+  color: white;
+  width: 100%;
+  padding: 0px 15px 100px 15px;
+  background-color: #000;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer p {
+  text-align: center;
+  color: #95928e;
+  font-size: 0.8rem;
+}
+
+.inner__footer {
+  width: 90%;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 3rem;
+}
+
+.footer__nav {
+  width: 100%;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
+.footer__nav.desktop-only {
+  display: none;
+}
+
+.footer__link {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer__link > a {
+  color: #95928e;
+  text-decoration: none;
+}
+
+.studios {
+  width: 100%;
+}
+
+.studios ul {
+  padding: 0;
+  margin: 0;
+  display: block;
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.studios__link {
+  width: 160px;
+  max-width: 160px;
+  padding: 0 10px;
+  margin: auto;
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.studios__link > a {
+  display: block;
+}
+
+.studio__img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.studio__img.hammer_games {
+  width: auto;
+  height: 45px;
+}
+
+.pegi {
+  display: block;
+}
+
+.pegi > .desktop-activision {
+  display: none;
+}
+
+.pegi__img {
+  width: 100px;
+}
+
+.pegi__img > a > img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inner__footer {
+    width: 90%;
+  }
+  .footer__nav.mobile-only {
+    display: none;
+  }
+  .footer__nav.desktop-only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .studios ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .studios__link {
+    margin: 0;
+  }
+  .studios__link.mobile-activision {
+    display: none;
+  }
+  .bar-break {
+    color: #95928e;
+    margin: 0px 2rem 0px 2rem;
+  }
+  .pegi {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pegi > .desktop-activision {
+    display: inline;
+    width: 160px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .inner__footer {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .inner__footer {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */
